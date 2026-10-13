@@ -1,0 +1,126 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-pediatric-03",
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:cond-03",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cond-03",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "195967001",
+              "display": "Asthma"
+            }
+          ]
+        },
+        "subject": {
+          "display": "Anonymous Patient"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:medreq-03",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "medreq-03",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "411939",
+              "display": "Albuterol 0.9 MG/ML Inhalation Solution"
+            }
+          ]
+        },
+        "subject": {
+          "display": "Anonymous Patient"
+        },
+        "dosageInstruction": [
+          {
+            "text": "2 puffs every 4 hours PRN for wheezing",
+            "asNeededBoolean": true,
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 4,
+                "periodUnit": "h"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-03",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation in Arterial blood by Pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "display": "Anonymous Patient"
+        },
+        "valueQuantity": {
+          "value": 94,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    }
+  ]
+}
